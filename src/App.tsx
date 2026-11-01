@@ -16,6 +16,7 @@ import Mentoring from './pages/lecturer/Mentoring'
 import Assign from './pages/lecturer/Assign'
 import Progress from './pages/lecturer/Progress'
 import ActivityBank from './pages/lecturer/ActivityBank'
+import ClassMap from './pages/lecturer/ClassMap'
 
 function page(path: string) {
   const [, area, a, b] = path.split('/')
@@ -36,6 +37,7 @@ function page(path: string) {
     if (a === 'pendampingan') return <Mentoring path={path} />
     if (a === 'perkembangan') return <Progress path={path} />
     if (a === 'bank-kegiatan') return <ActivityBank path={path} />
+    if (a === 'peta-kelas') return <ClassMap path={path} />
   }
   return <Landing />
 }

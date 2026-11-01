@@ -27,6 +27,7 @@ export function routeKey(path: string) {
   if (a === 'pendampingan' && b === 'tugaskan') return 'dsn-tugaskan'
   if (a === 'pendampingan') return 'dsn-dampingi'
   if (a === 'perkembangan') return 'dsn-kembang'
+  if (a === 'peta-kelas') return 'dsn-peta'
   if (a === 'bank-kegiatan') return 'dsn-bank'
   return 'dsn-home'
 }
@@ -111,6 +112,14 @@ export const TOURS: Record<string, TourStep[]> = {
     { sel: '[aria-label="Angka utama"]', title: 'Angka utama kelas', body: 'Rata-rata dan perubahannya dibanding sesi sebelumnya. Angka ini berasal dari temuan yang sudah Anda putuskan.' },
     { sel: '[aria-labelledby="tren-h"]', title: 'Tren antar sesi', body: 'Garis putus-putus menandai sesi yang masih sementara karena belum semua temuan diputuskan.' },
     { sel: '[aria-labelledby="konsep-h"]', prep: '[role="tablist"] [role="tab"]:nth-of-type(2)', title: 'Konsep yang paling lemah', body: 'Beralih ke tampilan Konsep untuk melihat konsep yang paling sering belum terpenuhi di kelas ini.' },
+    help,
+  ],
+  'dsn-peta': [
+    nav('Peta Kelas menampilkan seluruh mahasiswa dalam denah duduk. Setiap kotak terbagi empat: satu petak per indikator rubrik.'),
+    { sel: '[data-tour="filter-indikator"]', title: 'Filter per indikator', body: 'Tombol ini menyaring warna kotak berdasarkan satu indikator. Gunakan untuk melihat konsep mana yang paling banyak belum terpenuhi.' },
+    { sel: '[data-tour="peta-grid"]', title: 'Denah kelas', body: 'Arahkan kursor ke kotak mana pun untuk melihat detail mahasiswa di panel samping. Warna mengikuti status indikator: ungu berarti terpenuhi, krem berarti belum.' },
+    { sel: '[data-tour="detail-mhs"]', title: 'Detail mahasiswa', body: 'Panel ini menampilkan status tiap indikator, kutipan bukti, dan tautan ke halaman tinjauan untuk mahasiswa yang sedang dipilih.' },
+    { sel: '[data-tour="ringkasan-angka"]', title: 'Ringkasan angka', body: 'Jumlah mahasiswa, yang sudah mengumpulkan, yang perlu ditinjau, dan rata-rata sementara kelas.' },
     help,
   ],
   'dsn-bank': [

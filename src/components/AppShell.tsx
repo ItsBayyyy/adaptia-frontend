@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { BarChart3, BookOpenCheck, ClipboardList, Home, LifeBuoy, Library, LogOut, Repeat, Sprout, Users } from 'lucide-react'
+import { BarChart3, BookOpenCheck, ClipboardList, Grid3X3, Home, LifeBuoy, Library, LogOut, Repeat, Sprout, Users } from 'lucide-react'
 import { Link } from '../lib/router'
 import { BobyMark } from './Boby'
 import { Avatar, ToastHost } from './ui'
@@ -17,6 +17,7 @@ const NAV: Record<Role, { to: string; label: string; short: string; icon: typeof
     { to: '/dosen/sesi', label: 'Sesi Asesmen', short: 'Sesi', icon: ClipboardList, match: (p) => p.startsWith('/dosen/sesi') || p.startsWith('/dosen/tinjauan') },
     { to: '/dosen/pendampingan', label: 'Pendampingan', short: 'Dampingi', icon: Users, match: (p) => p.startsWith('/dosen/pendampingan') },
     { to: '/dosen/perkembangan', label: 'Perkembangan', short: 'Kembang', icon: BarChart3, match: (p) => p.startsWith('/dosen/perkembangan') },
+    { to: '/dosen/peta-kelas', label: 'Peta Kelas', short: 'Peta', icon: Grid3X3, match: (p) => p.startsWith('/dosen/peta-kelas') },
     { to: '/dosen/bank-kegiatan', label: 'Bank Kegiatan', short: 'Bank', icon: Library, match: (p) => p.startsWith('/dosen/bank-kegiatan') },
   ],
   mahasiswa: [
