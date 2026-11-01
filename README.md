@@ -1,4 +1,4 @@
-# ADAPTIA — purwarupa statis
+# ADAPTIA FRONTEND
 
 Landing page + Ruang Mahasiswa + Ruang Dosen, tanpa backend. Semua data contoh ada di `src/lib/data.ts` (nilai dihitung dari baris, dengan `console.assert`).
 
